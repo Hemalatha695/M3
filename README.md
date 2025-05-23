@@ -49,18 +49,9 @@ void calculateEMI(float principal, float rate, int months) {
 ```
 
 ## OUTPUT
-```
-Enter principal amount: 50000
-Enter annual interest rate (in percentage): 12
-Enter number of months (loan tenure): 12
-Monthly EMI = ₹4449.45
-```
-
-
-
+![image](https://github.com/user-attachments/assets/35aa84eb-2952-4396-8fb3-681ec5ebd9df)
 
 ## RESULT
-
 Thus the program to prepare EMI calculator using function without return type with arguments has been executed successfully
  
  
@@ -90,7 +81,8 @@ int main() {
     printf("Fibonacci series for %d terms:\n", n);
     printf("%d %d ", first, second);
 
-    for (int i = 3; i <= n; i++) {
+    for (int i = 3; i <= n; i++)
+   {
         next = first + second;    
         printf("%d ", next);      
         first = second;           
@@ -102,16 +94,7 @@ int main() {
 }
 ```
 ## OUTPUT
-```
-Fibonacci series for 6 terms:
-0 1 1 2 3 5
-```
-
-
-
-
-
-
+![image](https://github.com/user-attachments/assets/e925880a-7f86-4d02-8202-6ef8a9012937)
 
 ## RESULT
 Thus the program to generate the Fibonacci series for the value 6 has been executed successfully.
@@ -137,13 +120,12 @@ To write a C program to read n elements as input and print the last element of t
 int main() {
 
     int n;
-
-    printf("Enter the number of elements: ");
     scanf("%d", &n);
 
     int arr[n];
-    printf("Enter %d elements:\n", n);
-    for (int i = 0; i < n; i++) {
+    printf("%d ", n);
+    for (int i = 0; i < n; i++)
+ {
         scanf("%d", &arr[i]);
     }
 
@@ -153,13 +135,7 @@ int main() {
 }
 ```
 ## OUTPUT
-```
-Enter the number of elements: 5
-Enter 5 elements:
-10 20 30 40 50
-Last element of the array: 50
-```
-
+![image](https://github.com/user-attachments/assets/cd4e2f6e-45e1-4b4b-9784-6eb5e9f1ebfd)
 
 ## RESULT
 Thus the program to read n elements as input and print the last element of the array has been executed successfully.
@@ -181,48 +157,33 @@ To write a C Program to count total number of positive elements in an array.
 
 ## PROGRAM
 ```
-#include <stdio.h>
-
-int main() {
-    
-    int n;
-    printf("Enter the number of elements: ");
-    scanf("%d", &n);
-    int arr[n], count = 0;
-    printf("Enter %d elements:\n", n);
-    for (int i = 0; i < n; i++) {
-        scanf("%d", &arr[i]);
-        if (arr[i] > 0) {
+#include<stdio.h>
+int main()
+{
+    int n,count=0;
+    scanf("%d",&n);
+    int arr[n];
+    for(int i=0;i<n;i++)
+    {
+        scanf("%d",&arr[i]);
+    }
+    for(int i=0;i<n;i++)
+    {
+        if(arr[i]<0)
+        {
             count++;
         }
     }
-    printf("Total number of positive elements: %d\n", count);
-
-    return 0; 
+    printf("count  of positive numbers  in array: %d",count);
+    return 0;
 }
 ```
 
 ## OUTPUT
-```
-Enter the number of elements: 6
-Enter 6 elements:
--3 5 0 8 -1 4
-Total number of positive elements: 3
-```
-
-
-
+![image](https://github.com/user-attachments/assets/587c159f-4405-44ed-a8fc-60266142cb1b)
 
 ## RESULT
 Thus the program to count total number of positive elements in an array has been executed successfully.
-
-
-
-
-
- 
- 
-
 
 # EX -15 - Replace All Even Elements With 'E' In One Dimensional Array
 
@@ -243,38 +204,31 @@ To write a C program to replace all even elements with 'E' in one dimensional ar
 ## Program:
 ```
 #include <stdio.h>
-
 int main() {
-    int n;
-    printf("Enter the size of the array: ");
-    scanf("%d", &n);
 
-    int arr[n];
-    printf("Enter %d integer elements:\n", n);
-    for (int i = 0; i < n; i++) {
-        scanf("%d", &arr[i]);
+int n;
+printf("Enter Number of elements:");
+scanf("%d", &n);
+int arr[n];
+printf("Enter elements:");
+for (int i = 0; i < n; i++) {
+    scanf("%d", &arr[i]);  
+    if (arr[i] % 2 == 0) arr[i] = 'E'; 
+}
+for (int i = 0; i < n; i++) {
+    if (arr[i] == 'E') {
+        printf("E "); 
+    } else {
+        printf("%d ", arr[i]); 
     }
-    printf("Updated array:\n");
-    for (int i = 0; i < n; i++) {
-        if (arr[i] % 2 == 0) {
-            printf("E ");
-        } else {
-            printf("%d ", arr[i]);
-        }
-    }
+}
 
-    printf("\n");
-    return 0;
+return 0;
 }
 ```
 ## Output:
-```
-Enter the size of the array: 6
-Enter 6 integer elements:
-3 8 5 2 9 4
-Updated array:
-3 E 5 E 9 E
-```
+![image](https://github.com/user-attachments/assets/3b6be80f-6dd3-419c-bd80-6356aa28de40)
+
 
 
 ## Result:
